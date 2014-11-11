@@ -30,13 +30,14 @@ how to jquery
 1. If there is a .css (or .scss) file
     * copy to vendor/assets/stylesheets
     * Add ```@import yolo``` to app/assets/stylesheets/application.scss
-    * 
-      Add the html to your page you want to jquery-plugin following demo directions of plugin
-      ```js
-        $(window).ready(function() {
-          $("selector").yolo({options});
-        });
-      ```
+    * Add the html to your page you want to jquery-plugin following demo directions of plugin
+
+```js
+  $(window).ready(function() {
+    $("selector").yolo({options});
+  });
+```
+
 1. Refresh and hope things work.
 * Check the javascript console for errors
 * restart rails server if you added the first file to vendor (maybe?)
