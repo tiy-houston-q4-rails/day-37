@@ -1,0 +1,14 @@
+<div id="remote">
+  <input class="typeahead" type="text" placeholder="Select yo bacon, maaan">
+</div>
+
+<%= form_for (@meal ||= Meal.new) do |f| %>
+
+  <%= f.select :bacon,
+  Bacon.all.map { |u| [u.name, u.id] },
+               { include_blank: true },
+               { class: 'chosen-select' }
+  %>
+
+  <%= f.submit %>
+<% end %>

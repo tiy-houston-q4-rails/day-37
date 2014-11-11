@@ -1,0 +1,19 @@
+<div class="controls">
+  <label>Filter:</label>
+
+  <button class="filter" data-filter="all">All</button>
+  <% @stuff.uniq.each do |filter| %>
+    <button class="filter" data-filter=".category-<%= filter %>"><%= filter.titleize %></button>
+  <% end %>
+
+
+</div>
+<div id="Container" class="container">
+
+  <% @stuff.each do |filter| %>
+    <div class="mix category-<%= filter %>" ><%= image_tag "http://robohash.org/#{rand()}.png" %><br/><%= filter %></div>
+  <% end %>
+
+  <div class="gap"></div>
+  <div class="gap"></div>
+</div>
